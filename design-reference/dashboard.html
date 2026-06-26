@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — MeuExame</title>
+  <meta name="description" content="Protótipo navegável da plataforma MeuExame.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./assets/tailwind-config.js"></script>
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+<div data-sidebar-backdrop class="fixed inset-0 z-40 hidden bg-slate-950/40 lg:hidden"></div>
+<aside data-sidebar class="fixed inset-y-0 left-0 z-50 flex w-72 -translate-x-full flex-col border-r border-slate-200 bg-white p-5 transition-transform lg:translate-x-0">
+  <div class="px-2">
+<a href="dashboard.html" class="flex items-center gap-3">
+  <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand-700 text-white shadow-lg shadow-brand-700/20">
+    <i data-lucide="heart-pulse" class="h-5 w-5"></i>
+  </span>
+  <span>
+    <span class="block text-base font-extrabold tracking-tight text-slate-900">MeuExame</span>
+    <span class="block text-[10px] font-semibold uppercase tracking-[.18em] text-slate-500">Centro Clínico</span>
+  </span>
+</a></div>
+  <div class="mt-8 rounded-2xl bg-slate-50 p-3">
+    <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Clínica atual</p>
+    <div class="mt-2 flex items-center gap-3">
+      <span class="grid h-9 w-9 place-items-center rounded-lg bg-white text-brand-700 shadow-sm"><i data-lucide="building-2" class="h-4 w-4"></i></span>
+      <div class="min-w-0"><p class="truncate text-sm font-bold text-slate-800">Centro Clínico Master</p><p class="text-xs text-slate-500">Unidade principal</p></div>
+    </div>
+  </div>
+  <nav class="mt-7 flex-1 space-y-1">
+        <a href="dashboard.html" class="sidebar-link active flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+          <i data-lucide="layout-dashboard" class="h-5 w-5 text-slate-400"></i><span>Visão geral</span>
+        </a>
+        <a href="exames.html" class="sidebar-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+          <i data-lucide="files" class="h-5 w-5 text-slate-400"></i><span>Exames</span>
+        </a>
+        <a href="novo-exame.html" class="sidebar-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+          <i data-lucide="file-plus-2" class="h-5 w-5 text-slate-400"></i><span>Novo exame</span>
+        </a>
+        <a href="usuarios.html" class="sidebar-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+          <i data-lucide="users" class="h-5 w-5 text-slate-400"></i><span>Usuários</span>
+        </a>
+
+        <a href="design-system.html" class="sidebar-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+          <i data-lucide="palette" class="h-5 w-5 text-slate-400"></i><span>Design system</span>
+        </a>
+        <a href="logs.html" class="sidebar-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+          <i data-lucide="scroll-text" class="h-5 w-5 text-slate-400"></i><span>Logs do sistema</span>
+        </a></nav>
+  <div class="border-t border-slate-100 pt-4">
+    <div class="flex items-center gap-3 rounded-xl p-2">
+      <span class="grid h-10 w-10 place-items-center rounded-full bg-brand-100 font-bold text-brand-800">AC</span>
+      <div class="min-w-0 flex-1"><p class="truncate text-sm font-bold text-slate-800">Anderson Costa</p><p class="text-xs text-slate-500">Administrador</p></div>
+      <a href="login.html" class="text-slate-400 hover:text-rose-600" title="Sair"><i data-lucide="log-out" class="h-5 w-5"></i></a>
+    </div>
+  </div>
+</aside>
+<div class="min-h-screen lg:pl-72">
+  
+<header class="sticky top-0 z-30 border-b border-slate-200/80 bg-slate-50/90 backdrop-blur-xl">
+  <div class="flex items-center justify-between px-5 py-4 lg:px-8">
+    <div class="flex items-center gap-3">
+      <button data-sidebar-button class="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-700 lg:hidden"><i data-lucide="menu" class="h-5 w-5"></i></button>
+      <div><h1 class="text-lg font-extrabold tracking-tight text-slate-900 md:text-xl">Dashboard</h1><p class="hidden text-sm text-slate-500 sm:block">Acompanhe os principais indicadores do portal.</p></div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button class="relative grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-500 hover:text-slate-900">
+        <i data-lucide="bell" class="h-5 w-5"></i><span class="absolute right-2 top-2 h-2 w-2 rounded-full bg-rose-500 ring-2 ring-white"></span>
+      </button>
+      <span class="hidden rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600 sm:block">24 jun. 2026</span>
+    </div>
+  </div>
+</header>
+  <main class="p-5 lg:p-8">
+<div class="mx-auto max-w-7xl">
+  <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <div><p class="text-sm text-slate-500">Bem-vindo de volta, Anderson.</p><h2 class="mt-1 text-2xl font-extrabold tracking-tight">Resumo da operação</h2></div>
+    <a href="novo-exame.html" class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-700 px-4 py-3 text-sm font-bold text-white shadow-lg shadow-brand-700/20 hover:bg-brand-800"><i data-lucide="file-plus-2" class="h-4 w-4"></i> Novo exame</a>
+  </div>
+  <section class="mt-7 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+    <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-card"><div class="flex items-center justify-between"><span class="grid h-10 w-10 place-items-center rounded-xl bg-blue-50 text-blue-700"><i data-lucide="files" class="h-5 w-5"></i></span><span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-bold text-emerald-700">+12%</span></div><p class="mt-5 text-3xl font-extrabold">1.284</p><p class="mt-1 text-sm text-slate-500">Exames cadastrados</p></article>
+    <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-card"><div class="flex items-center justify-between"><span class="grid h-10 w-10 place-items-center rounded-xl bg-emerald-50 text-emerald-700"><i data-lucide="upload-cloud" class="h-5 w-5"></i></span><span class="text-xs font-semibold text-slate-400">Hoje</span></div><p class="mt-5 text-3xl font-extrabold">38</p><p class="mt-1 text-sm text-slate-500">Uploads realizados</p></article>
+    <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-card"><div class="flex items-center justify-between"><span class="grid h-10 w-10 place-items-center rounded-xl bg-violet-50 text-violet-700"><i data-lucide="download" class="h-5 w-5"></i></span><span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-bold text-emerald-700">+8%</span></div><p class="mt-5 text-3xl font-extrabold">842</p><p class="mt-1 text-sm text-slate-500">Downloads no mês</p></article>
+    <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-card"><div class="flex items-center justify-between"><span class="grid h-10 w-10 place-items-center rounded-xl bg-amber-50 text-amber-700"><i data-lucide="users" class="h-5 w-5"></i></span><span class="text-xs font-semibold text-slate-400">Equipe</span></div><p class="mt-5 text-3xl font-extrabold">12</p><p class="mt-1 text-sm text-slate-500">Usuários ativos</p></article>
+  </section>
+  <section class="mt-7 grid gap-6 xl:grid-cols-[1.4fr_.6fr]">
+    <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+      <div class="flex items-center justify-between border-b border-slate-100 p-5"><div><h3 class="font-extrabold">Últimos exames enviados</h3><p class="mt-1 text-xs text-slate-500">Atividade mais recente do painel</p></div><a href="exames.html" class="text-sm font-bold text-brand-700">Ver todos</a></div>
+      <div class="overflow-x-auto"><table class="w-full min-w-[620px] text-left"><thead class="bg-slate-50 text-xs uppercase tracking-wide text-slate-400"><tr><th class="px-5 py-3">Paciente</th><th class="px-5 py-3">Protocolo</th><th class="px-5 py-3">Data</th><th class="px-5 py-3">Status</th></tr></thead><tbody class="divide-y divide-slate-100 text-sm">
+        <tr><td class="px-5 py-4 font-bold">Mariana Oliveira</td><td class="px-5 py-4 text-slate-500">EXM-2026-001284</td><td class="px-5 py-4 text-slate-500">Hoje, 20:42</td><td class="px-5 py-4"><span class="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">Disponível</span></td></tr>
+        <tr><td class="px-5 py-4 font-bold">Carlos Henrique</td><td class="px-5 py-4 text-slate-500">EXM-2026-001283</td><td class="px-5 py-4 text-slate-500">Hoje, 20:31</td><td class="px-5 py-4"><span class="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">Disponível</span></td></tr>
+        <tr><td class="px-5 py-4 font-bold">Luciana Martins</td><td class="px-5 py-4 text-slate-500">EXM-2026-001282</td><td class="px-5 py-4 text-slate-500">Hoje, 19:58</td><td class="px-5 py-4"><span class="rounded-full bg-amber-50 px-2.5 py-1 text-xs font-bold text-amber-700">Bloqueado</span></td></tr>
+        <tr><td class="px-5 py-4 font-bold">Rafael Souza</td><td class="px-5 py-4 text-slate-500">EXM-2026-001281</td><td class="px-5 py-4 text-slate-500">Hoje, 19:15</td><td class="px-5 py-4"><span class="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">Disponível</span></td></tr>
+      </tbody></table></div>
+    </article>
+    <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-card"><div class="flex items-center justify-between"><div><h3 class="font-extrabold">Atividade semanal</h3><p class="mt-1 text-xs text-slate-500">Uploads dos últimos 7 dias</p></div><i data-lucide="bar-chart-3" class="h-5 w-5 text-slate-400"></i></div>
+      <div class="mt-8 flex h-48 items-end justify-between gap-2">
+        <div class="flex flex-1 flex-col items-center gap-2"><div class="h-[42%] w-full rounded-t-lg bg-brand-100"></div><span class="text-[10px] font-bold text-slate-400">SEG</span></div>
+        <div class="flex flex-1 flex-col items-center gap-2"><div class="h-[66%] w-full rounded-t-lg bg-brand-200"></div><span class="text-[10px] font-bold text-slate-400">TER</span></div>
+        <div class="flex flex-1 flex-col items-center gap-2"><div class="h-[52%] w-full rounded-t-lg bg-brand-100"></div><span class="text-[10px] font-bold text-slate-400">QUA</span></div>
+        <div class="flex flex-1 flex-col items-center gap-2"><div class="h-[78%] w-full rounded-t-lg bg-brand-300"></div><span class="text-[10px] font-bold text-slate-400">QUI</span></div>
+        <div class="flex flex-1 flex-col items-center gap-2"><div class="h-[100%] w-full rounded-t-lg bg-brand-700"></div><span class="text-[10px] font-bold text-slate-700">SEX</span></div>
+        <div class="flex flex-1 flex-col items-center gap-2"><div class="h-[35%] w-full rounded-t-lg bg-brand-100"></div><span class="text-[10px] font-bold text-slate-400">SÁB</span></div>
+        <div class="flex flex-1 flex-col items-center gap-2"><div class="h-[20%] w-full rounded-t-lg bg-brand-50"></div><span class="text-[10px] font-bold text-slate-400">DOM</span></div>
+      </div>
+    </article>
+  </section>
+</div>
+</main>
+</div>
+<script src="./assets/app.js"></script>
+</body></html>

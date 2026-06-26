@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acesse seus exames — MeuExame</title>
+  <meta name="description" content="Protótipo navegável da plataforma MeuExame.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./assets/tailwind-config.js"></script>
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-slate-900">
+
+<header class="sticky top-0 z-40 border-b border-slate-200/70 bg-white/85 backdrop-blur-xl">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+    
+<a href="index.html" class="flex items-center gap-3">
+  <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand-700 text-white shadow-lg shadow-brand-700/20">
+    <i data-lucide="heart-pulse" class="h-5 w-5"></i>
+  </span>
+  <span>
+    <span class="block text-base font-extrabold tracking-tight text-slate-900">MeuExame</span>
+    <span class="block text-[10px] font-semibold uppercase tracking-[.18em] text-slate-500">Centro Clínico</span>
+  </span>
+</a>
+    <nav class="hidden items-center gap-8 md:flex">
+      <a href="index.html#como-funciona" class="text-sm font-semibold text-slate-600 transition hover:text-brand-700">Como funciona</a>
+      <a href="ajuda.html" class="text-sm font-semibold text-slate-600 transition hover:text-brand-700">Ajuda</a>
+      <a href="privacidade.html" class="text-sm font-semibold text-slate-600 transition hover:text-brand-700">Privacidade</a>
+      <a href="index.html#consulta" class="rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-bold text-white shadow-lg shadow-brand-700/20 transition hover:bg-brand-800">Acessar exame</a>
+    </nav>
+    <button data-menu-button class="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 text-slate-700 md:hidden">
+      <i data-lucide="menu" class="h-5 w-5"></i>
+    </button>
+  </div>
+  <div data-mobile-menu class="hidden border-t border-slate-100 bg-white px-5 py-4 md:hidden">
+    <div class="grid gap-2">
+      <a href="index.html#como-funciona" class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">Como funciona</a>
+      <a href="ajuda.html" class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">Ajuda</a>
+      <a href="privacidade.html" class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">Privacidade</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="hero-glow grid-pattern relative overflow-hidden">
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:py-24">
+      <div class="fade-in">
+        <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white px-3 py-1.5 text-xs font-bold text-brand-800 shadow-sm">
+          <i data-lucide="shield-check" class="h-4 w-4"></i> Acesso seguro aos seus resultados
+        </span>
+        <h1 class="mt-6 max-w-3xl text-4xl font-extrabold leading-tight tracking-[-.04em] text-slate-950 md:text-6xl">Seus exames, disponíveis de forma <span class="text-brand-700">simples e segura.</span></h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">Consulte, visualize e baixe seus resultados online usando apenas o CPF e o protocolo recebido no atendimento.</p>
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="#consulta" class="inline-flex items-center gap-2 rounded-2xl bg-brand-700 px-6 py-3.5 text-sm font-bold text-white shadow-xl shadow-brand-700/20 transition hover:-translate-y-0.5 hover:bg-brand-800">
+            Acessar meu exame <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+          <a href="ajuda.html" class="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-bold text-slate-700 hover:border-slate-300">
+            Preciso de ajuda
+          </a>
+        </div>
+        <div class="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm font-semibold text-slate-500">
+          <span class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> Sem cadastro</span>
+          <span class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> Disponível 24 horas</span>
+          <span class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> Documento protegido</span>
+        </div>
+      </div>
+      <div id="consulta" class="relative scroll-mt-28">
+        <div class="absolute -inset-6 -z-10 rounded-[2.5rem] bg-brand-200/30 blur-3xl"></div>
+        <div class="rounded-[2rem] border border-white bg-white p-6 shadow-soft md:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <div><p class="text-xs font-bold uppercase tracking-[.16em] text-brand-700">Consulta online</p><h2 class="mt-2 text-2xl font-extrabold tracking-tight">Localize seu exame</h2><p class="mt-2 text-sm leading-6 text-slate-500">Preencha os dados exatamente como foram informados no atendimento.</p></div>
+            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-brand-50 text-brand-700"><i data-lucide="search" class="h-6 w-6"></i></span>
+          </div>
+          <form data-demo-form data-target="resultado.html" data-message="Exame localizado. Abrindo resultado..." class="mt-7 space-y-5">
+            <label class="block"><span class="mb-2 block text-sm font-bold text-slate-700">CPF do paciente</span><div class="relative"><i data-lucide="user-round" class="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"></i><input data-cpf required placeholder="000.000.000-00" class="h-13 w-full rounded-2xl border border-slate-200 bg-slate-50 py-3.5 pl-12 pr-4 text-sm font-medium outline-none transition focus:border-brand-500 focus:bg-white focus:ring-4 focus:ring-brand-100"></div></label>
+            <label class="block"><span class="mb-2 block text-sm font-bold text-slate-700">Protocolo do exame</span><div class="relative"><i data-lucide="hash" class="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"></i><input required placeholder="Ex.: EXM-2026-001234" class="h-13 w-full rounded-2xl border border-slate-200 bg-slate-50 py-3.5 pl-12 pr-4 text-sm font-medium uppercase outline-none transition focus:border-brand-500 focus:bg-white focus:ring-4 focus:ring-brand-100"></div></label>
+            <button class="flex w-full items-center justify-center gap-2 rounded-2xl bg-slate-950 px-5 py-4 text-sm font-bold text-white transition hover:bg-brand-800">Consultar exame <i data-lucide="arrow-right" class="h-4 w-4"></i></button>
+          </form>
+          <p class="mt-5 flex items-start gap-2 rounded-xl bg-slate-50 p-3 text-xs leading-5 text-slate-500"><i data-lucide="lock-keyhole" class="mt-0.5 h-4 w-4 shrink-0 text-brand-700"></i>Seus dados são usados somente para localizar o documento e não ficam visíveis publicamente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center"><p class="text-sm font-bold uppercase tracking-[.18em] text-brand-700">Como funciona</p><h2 class="mt-3 text-3xl font-extrabold tracking-tight md:text-4xl">Seu resultado em três passos</h2><p class="mt-4 text-slate-500">Um processo rápido, direto e pensado para funcionar bem no celular.</p></div>
+    <div class="mt-12 grid gap-5 md:grid-cols-3">
+      <article class="rounded-3xl border border-slate-200 bg-white p-7 shadow-card"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-brand-50 text-brand-700"><i data-lucide="clipboard-pen-line" class="h-6 w-6"></i></span><span class="mt-6 block text-xs font-bold text-brand-700">PASSO 01</span><h3 class="mt-2 text-lg font-extrabold">Informe seus dados</h3><p class="mt-3 text-sm leading-6 text-slate-500">Digite o CPF do paciente e o protocolo entregue pela clínica.</p></article><article class="rounded-3xl border border-slate-200 bg-white p-7 shadow-card"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-brand-50 text-brand-700"><i data-lucide="search-check" class="h-6 w-6"></i></span><span class="mt-6 block text-xs font-bold text-brand-700">PASSO 02</span><h3 class="mt-2 text-lg font-extrabold">Localize o exame</h3><p class="mt-3 text-sm leading-6 text-slate-500">O sistema verifica com segurança se o resultado já está disponível.</p></article><article class="rounded-3xl border border-slate-200 bg-white p-7 shadow-card"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-brand-50 text-brand-700"><i data-lucide="file-down" class="h-6 w-6"></i></span><span class="mt-6 block text-xs font-bold text-brand-700">PASSO 03</span><h3 class="mt-2 text-lg font-extrabold">Visualize ou baixe</h3><p class="mt-3 text-sm leading-6 text-slate-500">Abra o PDF no navegador ou salve uma cópia no seu dispositivo.</p></article>
+    </div>
+  </section>
+
+  <section class="bg-slate-950">
+    <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:px-8">
+      <div><span class="inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-brand-300">PRIVACIDADE EM PRIMEIRO LUGAR</span><h2 class="mt-5 text-3xl font-extrabold tracking-tight text-white">Seus dados e documentos protegidos.</h2><p class="mt-4 max-w-xl leading-7 text-slate-300">O acesso depende da combinação correta de CPF e protocolo. Os arquivos não são publicados em links abertos e todas as consultas são protegidas.</p></div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-5"><i data-lucide="lock" class="h-6 w-6 text-brand-300"></i><p class="mt-4 font-bold text-white">Conexão segura</p><p class="mt-2 text-sm leading-6 text-slate-400">Proteção durante a consulta e o download.</p></div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-5"><i data-lucide="eye-off" class="h-6 w-6 text-brand-300"></i><p class="mt-4 font-bold text-white">Acesso restrito</p><p class="mt-2 text-sm leading-6 text-slate-400">Somente quem possui os dados corretos acessa.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t border-slate-200 bg-white">
+  <div class="mx-auto grid max-w-7xl gap-10 px-5 py-12 md:grid-cols-3 lg:px-8">
+    <div>
+<a href="index.html" class="flex items-center gap-3">
+  <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand-700 text-white shadow-lg shadow-brand-700/20">
+    <i data-lucide="heart-pulse" class="h-5 w-5"></i>
+  </span>
+  <span>
+    <span class="block text-base font-extrabold tracking-tight text-slate-900">MeuExame</span>
+    <span class="block text-[10px] font-semibold uppercase tracking-[.18em] text-slate-500">Centro Clínico</span>
+  </span>
+</a><p class="mt-4 max-w-sm text-sm leading-6 text-slate-500">Acesso simples e seguro aos seus resultados de exames, disponível a qualquer hora.</p></div>
+    <div>
+      <p class="text-sm font-bold text-slate-900">Atendimento</p>
+      <div class="mt-4 space-y-2 text-sm text-slate-500">
+        <p>Segunda a sexta, 7h às 18h</p><p>(21) 99999-9999</p><p>atendimento@clinica.com.br</p>
+      </div>
+    </div>
+    <div>
+      <p class="text-sm font-bold text-slate-900">Links úteis</p>
+      <div class="mt-4 grid gap-2 text-sm">
+        <a href="ajuda.html" class="text-slate-500 hover:text-brand-700">Central de ajuda</a>
+        <a href="privacidade.html" class="text-slate-500 hover:text-brand-700">Política de privacidade</a>
+        <a href="login.html" class="text-slate-400 hover:text-brand-700">Acesso da equipe</a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-slate-100 px-5 py-5 text-center text-xs text-slate-400">© 2026 MeuExame. Protótipo para validação de interface.</div>
+</footer>
+<script src="./assets/app.js"></script>
+</body></html>

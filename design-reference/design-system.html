@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System — MeuExame</title>
+  <meta name="description" content="Documentação visual dos tokens e componentes do MeuExame.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./assets/tailwind-config.js"></script>
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <div data-sidebar-backdrop class="fixed inset-0 z-40 hidden bg-slate-950/40 lg:hidden"></div>
+
+  <aside data-sidebar class="fixed inset-y-0 left-0 z-50 flex w-72 -translate-x-full flex-col border-r border-slate-200 bg-white p-5 transition-transform lg:translate-x-0">
+    <div class="px-2">
+      <a href="dashboard.html" class="flex items-center gap-3">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand-700 text-white shadow-lg shadow-brand-700/20">
+          <i data-lucide="heart-pulse" class="h-5 w-5"></i>
+        </span>
+        <span>
+          <span class="block text-base font-extrabold tracking-tight text-slate-900">MeuExame</span>
+          <span class="block text-[10px] font-semibold uppercase tracking-[.18em] text-slate-500">Centro Clínico</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="mt-8 rounded-2xl bg-slate-50 p-3">
+      <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Documentação</p>
+      <div class="mt-2 flex items-center gap-3">
+        <span class="grid h-9 w-9 place-items-center rounded-lg bg-white text-brand-700 shadow-sm">
+          <i data-lucide="palette" class="h-4 w-4"></i>
+        </span>
+        <div class="min-w-0">
+          <p class="truncate text-sm font-bold text-slate-800">Design System</p>
+          <p class="text-xs text-slate-500">Versão 1.0</p>
+        </div>
+      </div>
+    </div>
+
+    <nav class="mt-7 flex-1 space-y-1">
+      <a href="dashboard.html" class="sidebar-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+        <i data-lucide="layout-dashboard" class="h-5 w-5 text-slate-400"></i><span>Visão geral</span>
+      </a>
+      <a href="exames.html" class="sidebar-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+        <i data-lucide="files" class="h-5 w-5 text-slate-400"></i><span>Exames</span>
+      </a>
+      <a href="novo-exame.html" class="sidebar-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+        <i data-lucide="file-plus-2" class="h-5 w-5 text-slate-400"></i><span>Novo exame</span>
+      </a>
+      <a href="usuarios.html" class="sidebar-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+        <i data-lucide="users" class="h-5 w-5 text-slate-400"></i><span>Usuários</span>
+      </a>
+      <a href="design-system.html" class="sidebar-link active flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+        <i data-lucide="palette" class="h-5 w-5 text-slate-400"></i><span>Design system</span>
+      </a>
+      <a href="logs.html" class="sidebar-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+        <i data-lucide="scroll-text" class="h-5 w-5 text-slate-400"></i><span>Logs do sistema</span>
+      </a>
+    </nav>
+
+    <div class="border-t border-slate-100 pt-4">
+      <a href="dashboard.html" class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-bold text-slate-500 hover:bg-slate-50 hover:text-brand-700">
+        <i data-lucide="arrow-left" class="h-4 w-4"></i> Voltar ao painel
+      </a>
+    </div>
+  </aside>
+
+  <div class="min-h-screen lg:pl-72">
+    <header class="sticky top-0 z-30 border-b border-slate-200/80 bg-slate-50/90 backdrop-blur-xl">
+      <div class="flex items-center justify-between px-5 py-4 lg:px-8">
+        <div class="flex items-center gap-3">
+          <button data-sidebar-button class="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-700 lg:hidden">
+            <i data-lucide="menu" class="h-5 w-5"></i>
+          </button>
+          <div>
+            <h1 class="text-lg font-extrabold tracking-tight text-slate-900 md:text-xl">Design System</h1>
+            <p class="hidden text-sm text-slate-500 sm:block">Tokens, componentes e padrões visuais do MeuExame.</p>
+          </div>
+        </div>
+        <span class="rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-bold text-slate-500">v1.0</span>
+      </div>
+    </header>
+
+    <main class="p-5 lg:p-8">
+      <div class="mx-auto max-w-7xl space-y-10">
+
+        <section class="overflow-hidden rounded-[2rem] bg-slate-950 p-7 text-white shadow-soft md:p-10">
+          <div class="grid gap-8 lg:grid-cols-[1fr_340px] lg:items-end">
+            <div>
+              <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-bold text-brand-300">
+                <i data-lucide="sparkles" class="h-4 w-4"></i> MeuExame UI
+              </span>
+              <h2 class="mt-6 max-w-3xl text-3xl font-extrabold tracking-[-.04em] md:text-5xl">Uma linguagem visual clara, humana e segura.</h2>
+              <p class="mt-5 max-w-2xl text-sm leading-7 text-slate-300 md:text-base">Este arquivo reúne os principais tokens e componentes usados nas áreas pública e administrativa do produto.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <p class="text-xs font-bold uppercase tracking-[.16em] text-slate-400">Princípios</p>
+              <div class="mt-4 grid gap-3 text-sm">
+                <span class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-300"></i> Clareza antes da decoração</span>
+                <span class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-300"></i> Alto contraste e leitura rápida</span>
+                <span class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-300"></i> Feedback visível para cada ação</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- COLORS -->
+        <section>
+          <div class="mb-5">
+            <p class="text-xs font-bold uppercase tracking-[.18em] text-brand-700">01 · Foundations</p>
+            <h2 class="mt-2 text-2xl font-extrabold tracking-tight">Cores</h2>
+            <p class="mt-2 text-sm text-slate-500">Paleta principal, neutros e cores de feedback.</p>
+          </div>
+
+          <div class="grid gap-6 xl:grid-cols-2">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+              <h3 class="font-extrabold">Brand / Teal</h3>
+              <div class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-5">
+                <div><div class="h-16 rounded-xl bg-brand-50 ring-1 ring-inset ring-slate-200"></div><p class="mt-2 text-xs font-bold">50</p><p class="text-[11px] text-slate-400">#F0FDFA</p></div>
+                <div><div class="h-16 rounded-xl bg-brand-100"></div><p class="mt-2 text-xs font-bold">100</p><p class="text-[11px] text-slate-400">#CCFBF1</p></div>
+                <div><div class="h-16 rounded-xl bg-brand-300"></div><p class="mt-2 text-xs font-bold">300</p><p class="text-[11px] text-slate-400">#5EEAD4</p></div>
+                <div><div class="h-16 rounded-xl bg-brand-500"></div><p class="mt-2 text-xs font-bold">500</p><p class="text-[11px] text-slate-400">#14B8A6</p></div>
+                <div><div class="h-16 rounded-xl bg-brand-700"></div><p class="mt-2 text-xs font-bold">700</p><p class="text-[11px] text-slate-400">#0F766E</p></div>
+                <div><div class="h-16 rounded-xl bg-brand-800"></div><p class="mt-2 text-xs font-bold">800</p><p class="text-[11px] text-slate-400">#115E59</p></div>
+                <div><div class="h-16 rounded-xl bg-brand-900"></div><p class="mt-2 text-xs font-bold">900</p><p class="text-[11px] text-slate-400">#134E4A</p></div>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+              <h3 class="font-extrabold">Neutral / Slate</h3>
+              <div class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-5">
+                <div><div class="h-16 rounded-xl bg-slate-50 ring-1 ring-inset ring-slate-200"></div><p class="mt-2 text-xs font-bold">50</p><p class="text-[11px] text-slate-400">#F8FAFC</p></div>
+                <div><div class="h-16 rounded-xl bg-slate-100"></div><p class="mt-2 text-xs font-bold">100</p><p class="text-[11px] text-slate-400">#F1F5F9</p></div>
+                <div><div class="h-16 rounded-xl bg-slate-300"></div><p class="mt-2 text-xs font-bold">300</p><p class="text-[11px] text-slate-400">#CBD5E1</p></div>
+                <div><div class="h-16 rounded-xl bg-slate-500"></div><p class="mt-2 text-xs font-bold">500</p><p class="text-[11px] text-slate-400">#64748B</p></div>
+                <div><div class="h-16 rounded-xl bg-slate-700"></div><p class="mt-2 text-xs font-bold">700</p><p class="text-[11px] text-slate-400">#334155</p></div>
+                <div><div class="h-16 rounded-xl bg-slate-900"></div><p class="mt-2 text-xs font-bold">900</p><p class="text-[11px] text-slate-400">#0F172A</p></div>
+                <div><div class="h-16 rounded-xl bg-slate-950"></div><p class="mt-2 text-xs font-bold">950</p><p class="text-[11px] text-slate-400">#020617</p></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <div class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5"><p class="text-xs font-bold uppercase tracking-wide text-emerald-700">Success</p><p class="mt-2 font-extrabold text-emerald-900">#059669</p></div>
+            <div class="rounded-2xl border border-amber-200 bg-amber-50 p-5"><p class="text-xs font-bold uppercase tracking-wide text-amber-700">Warning</p><p class="mt-2 font-extrabold text-amber-900">#D97706</p></div>
+            <div class="rounded-2xl border border-rose-200 bg-rose-50 p-5"><p class="text-xs font-bold uppercase tracking-wide text-rose-700">Danger</p><p class="mt-2 font-extrabold text-rose-900">#E11D48</p></div>
+            <div class="rounded-2xl border border-blue-200 bg-blue-50 p-5"><p class="text-xs font-bold uppercase tracking-wide text-blue-700">Info</p><p class="mt-2 font-extrabold text-blue-900">#2563EB</p></div>
+          </div>
+        </section>
+
+        <!-- TYPOGRAPHY -->
+        <section>
+          <div class="mb-5"><p class="text-xs font-bold uppercase tracking-[.18em] text-brand-700">02 · Foundations</p><h2 class="mt-2 text-2xl font-extrabold tracking-tight">Tipografia</h2><p class="mt-2 text-sm text-slate-500">Inter como família principal, com pesos de 400 a 800.</p></div>
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+            <div class="grid gap-8 lg:grid-cols-[220px_1fr]">
+              <div class="rounded-2xl bg-slate-950 p-6 text-white"><p class="text-6xl font-extrabold tracking-[-.06em]">Aa</p><p class="mt-4 font-bold">Inter</p><p class="mt-1 text-xs text-slate-400">UI Sans Serif</p></div>
+              <div class="space-y-6">
+                <div class="border-b border-slate-100 pb-5"><p class="text-xs font-bold text-slate-400">Display · 48 / 800</p><p class="mt-2 text-4xl font-extrabold tracking-[-.04em] md:text-5xl">Seus exames, sem complicação.</p></div>
+                <div class="border-b border-slate-100 pb-5"><p class="text-xs font-bold text-slate-400">Heading 1 · 30 / 800</p><p class="mt-2 text-3xl font-extrabold tracking-tight">Detalhes do exame</p></div>
+                <div class="border-b border-slate-100 pb-5"><p class="text-xs font-bold text-slate-400">Heading 2 · 24 / 800</p><p class="mt-2 text-2xl font-extrabold tracking-tight">Exames cadastrados</p></div>
+                <div class="border-b border-slate-100 pb-5"><p class="text-xs font-bold text-slate-400">Body · 16 / 400</p><p class="mt-2 leading-7 text-slate-600">Texto usado em descrições, explicações e conteúdo informativo.</p></div>
+                <div><p class="text-xs font-bold text-slate-400">Label · 14 / 700</p><p class="mt-2 text-sm font-bold text-slate-700">CPF do paciente</p></div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- SPACING / RADIUS / SHADOW -->
+        <section>
+          <div class="mb-5"><p class="text-xs font-bold uppercase tracking-[.18em] text-brand-700">03 · Foundations</p><h2 class="mt-2 text-2xl font-extrabold tracking-tight">Espaçamento, raios e sombras</h2></div>
+          <div class="grid gap-6 xl:grid-cols-3">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+              <h3 class="font-extrabold">Spacing scale</h3>
+              <div class="mt-5 space-y-4">
+                <div class="flex items-center gap-4"><span class="w-12 text-xs font-bold text-slate-400">4px</span><div class="h-3 w-1 rounded bg-brand-700"></div></div>
+                <div class="flex items-center gap-4"><span class="w-12 text-xs font-bold text-slate-400">8px</span><div class="h-3 w-2 rounded bg-brand-700"></div></div>
+                <div class="flex items-center gap-4"><span class="w-12 text-xs font-bold text-slate-400">16px</span><div class="h-3 w-4 rounded bg-brand-700"></div></div>
+                <div class="flex items-center gap-4"><span class="w-12 text-xs font-bold text-slate-400">24px</span><div class="h-3 w-6 rounded bg-brand-700"></div></div>
+                <div class="flex items-center gap-4"><span class="w-12 text-xs font-bold text-slate-400">32px</span><div class="h-3 w-8 rounded bg-brand-700"></div></div>
+                <div class="flex items-center gap-4"><span class="w-12 text-xs font-bold text-slate-400">48px</span><div class="h-3 w-12 rounded bg-brand-700"></div></div>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+              <h3 class="font-extrabold">Border radius</h3>
+              <div class="mt-5 grid grid-cols-2 gap-4">
+                <div class="h-20 rounded-lg bg-brand-100 p-3 text-xs font-bold text-brand-800">8px</div>
+                <div class="h-20 rounded-xl bg-brand-100 p-3 text-xs font-bold text-brand-800">12px</div>
+                <div class="h-20 rounded-2xl bg-brand-100 p-3 text-xs font-bold text-brand-800">16px</div>
+                <div class="h-20 rounded-3xl bg-brand-100 p-3 text-xs font-bold text-brand-800">24px</div>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+              <h3 class="font-extrabold">Shadows</h3>
+              <div class="mt-5 space-y-4">
+                <div class="rounded-xl border border-slate-100 bg-white p-4 shadow-sm"><p class="text-xs font-bold">shadow-sm</p></div>
+                <div class="rounded-xl border border-slate-100 bg-white p-4 shadow-card"><p class="text-xs font-bold">shadow-card</p></div>
+                <div class="rounded-xl border border-slate-100 bg-white p-4 shadow-soft"><p class="text-xs font-bold">shadow-soft</p></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- BUTTONS -->
+        <section>
+          <div class="mb-5"><p class="text-xs font-bold uppercase tracking-[.18em] text-brand-700">04 · Components</p><h2 class="mt-2 text-2xl font-extrabold tracking-tight">Buttons</h2><p class="mt-2 text-sm text-slate-500">Use textos curtos, verbos de ação e ícones somente quando melhorarem a leitura.</p></div>
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+            <div class="grid gap-8 xl:grid-cols-2">
+              <div>
+                <p class="text-sm font-extrabold">Variantes</p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                  <button data-action data-message="Botão primário" class="inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-3 text-sm font-bold text-white shadow-lg shadow-brand-700/20 hover:bg-brand-800"><i data-lucide="plus" class="h-4 w-4"></i> Primário</button>
+                  <button data-action data-message="Botão escuro" class="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-4 py-3 text-sm font-bold text-white hover:bg-brand-800">Escuro <i data-lucide="arrow-right" class="h-4 w-4"></i></button>
+                  <button data-action data-message="Botão secundário" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-700 hover:border-brand-300 hover:text-brand-700">Secundário</button>
+                  <button data-action data-message="Botão fantasma" class="inline-flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-100">Ghost</button>
+                  <button data-action data-message="Ação destrutiva" class="inline-flex items-center gap-2 rounded-xl bg-rose-600 px-4 py-3 text-sm font-bold text-white hover:bg-rose-700"><i data-lucide="trash-2" class="h-4 w-4"></i> Destrutivo</button>
+                  <button disabled class="inline-flex cursor-not-allowed items-center gap-2 rounded-xl bg-slate-100 px-4 py-3 text-sm font-bold text-slate-400">Desabilitado</button>
+                </div>
+              </div>
+              <div>
+                <p class="text-sm font-extrabold">Tamanhos</p>
+                <div class="mt-4 flex flex-wrap items-center gap-3">
+                  <button class="rounded-lg bg-brand-700 px-3 py-2 text-xs font-bold text-white">Small</button>
+                  <button class="rounded-xl bg-brand-700 px-4 py-3 text-sm font-bold text-white">Medium</button>
+                  <button class="rounded-2xl bg-brand-700 px-6 py-4 text-base font-bold text-white">Large</button>
+                  <button class="grid h-11 w-11 place-items-center rounded-xl bg-brand-700 text-white"><i data-lucide="download" class="h-5 w-5"></i></button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- FORM CONTROLS -->
+        <section>
+          <div class="mb-5"><p class="text-xs font-bold uppercase tracking-[.18em] text-brand-700">05 · Components</p><h2 class="mt-2 text-2xl font-extrabold tracking-tight">Inputs, selects e campos</h2><p class="mt-2 text-sm text-slate-500">Altura padrão de 48px, labels fortes e estados de erro sempre acompanhados de texto.</p></div>
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+            <div class="grid gap-6 md:grid-cols-2">
+              <label class="block"><span class="mb-2 block text-sm font-bold text-slate-700">Input padrão</span><input placeholder="Digite uma informação" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-4 focus:ring-brand-100"></label>
+              <label class="block"><span class="mb-2 block text-sm font-bold text-slate-700">Input com ícone</span><div class="relative"><i data-lucide="search" class="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"></i><input placeholder="Buscar exame..." class="w-full rounded-xl border border-slate-200 bg-slate-50 py-3 pl-11 pr-4 text-sm outline-none focus:border-brand-500 focus:bg-white focus:ring-4 focus:ring-brand-100"></div></label>
+              <label class="block"><span class="mb-2 block text-sm font-bold text-slate-700">Select</span><select class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none focus:border-brand-500 focus:bg-white focus:ring-4 focus:ring-brand-100"><option>Selecione uma opção</option><option>Resultado laboratorial</option><option>Imagem</option></select></label>
+              <label class="block"><span class="mb-2 block text-sm font-bold text-slate-700">Data</span><input type="date" value="2026-06-24" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none focus:border-brand-500 focus:bg-white focus:ring-4 focus:ring-brand-100"></label>
+              <label class="block"><span class="mb-2 block text-sm font-bold text-rose-700">Estado de erro</span><input value="CPF inválido" class="w-full rounded-xl border border-rose-300 bg-rose-50 px-4 py-3 text-sm text-rose-900 outline-none ring-4 ring-rose-50"><span class="mt-2 flex items-center gap-1.5 text-xs font-semibold text-rose-600"><i data-lucide="circle-alert" class="h-3.5 w-3.5"></i> Informe um CPF válido.</span></label>
+              <label class="block"><span class="mb-2 block text-sm font-bold text-slate-400">Desabilitado</span><input disabled value="Campo não editável" class="w-full cursor-not-allowed rounded-xl border border-slate-200 bg-slate-100 px-4 py-3 text-sm text-slate-400"></label>
+              <label class="block md:col-span-2"><span class="mb-2 block text-sm font-bold text-slate-700">Textarea</span><textarea rows="4" placeholder="Digite uma observação..." class="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none focus:border-brand-500 focus:bg-white focus:ring-4 focus:ring-brand-100"></textarea></label>
+            </div>
+
+            <div class="mt-7 flex flex-wrap gap-6 border-t border-slate-100 pt-6">
+              <label class="flex items-center gap-3"><input type="checkbox" checked class="h-4 w-4 rounded border-slate-300 text-brand-700 focus:ring-brand-500"><span class="text-sm font-semibold text-slate-700">Checkbox selecionado</span></label>
+              <label class="flex items-center gap-3"><input type="checkbox" class="h-4 w-4 rounded border-slate-300 text-brand-700 focus:ring-brand-500"><span class="text-sm font-semibold text-slate-700">Checkbox padrão</span></label>
+              <label class="flex items-center gap-3"><input type="radio" name="example" checked class="h-4 w-4 border-slate-300 text-brand-700 focus:ring-brand-500"><span class="text-sm font-semibold text-slate-700">Opção A</span></label>
+              <label class="flex items-center gap-3"><input type="radio" name="example" class="h-4 w-4 border-slate-300 text-brand-700 focus:ring-brand-500"><span class="text-sm font-semibold text-slate-700">Opção B</span></label>
+            </div>
+          </article>
+        </section>
+
+        <!-- CARDS -->
+        <section>
+          <div class="mb-5"><p class="text-xs font-bold uppercase tracking-[.18em] text-brand-700">06 · Components</p><h2 class="mt-2 text-2xl font-extrabold tracking-tight">Cards</h2></div>
+          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-blue-50 text-blue-700"><i data-lucide="files" class="h-5 w-5"></i></span>
+              <p class="mt-5 text-3xl font-extrabold">1.284</p><p class="mt-1 text-sm text-slate-500">Card de métrica</p>
+            </article>
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
+              <div class="flex items-start justify-between gap-4"><div><p class="text-sm font-extrabold">Card informativo</p><p class="mt-2 text-sm leading-6 text-slate-500">Use para agrupar conteúdo relacionado.</p></div><i data-lucide="info" class="h-5 w-5 text-slate-400"></i></div>
+            </article>
+            <article class="rounded-2xl bg-slate-950 p-5 text-white shadow-card">
+              <p class="text-xs font-bold uppercase tracking-wide text-brand-300">Destaque</p><p class="mt-3 text-xl font-extrabold">Card escuro</p><p class="mt-2 text-sm leading-6 text-slate-400">Ideal para chamadas especiais.</p>
+            </article>
+            <article class="rounded-2xl border border-brand-200 bg-brand-50 p-5">
+              <p class="text-sm font-extrabold text-brand-900">Card com contexto</p><p class="mt-2 text-sm leading-6 text-brand-800">Use fundos suaves para informações positivas.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- BADGES / ALERTS -->
+        <section>
+          <div class="mb-5"><p class="text-xs font-bold uppercase tracking-[.18em] text-brand-700">07 · Components</p><h2 class="mt-2 text-2xl font-extrabold tracking-tight">Badges e feedback</h2></div>
+          <div class="grid gap-6 xl:grid-cols-2">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+              <h3 class="font-extrabold">Badges</h3>
+              <div class="mt-5 flex flex-wrap gap-3">
+                <span class="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">Disponível</span>
+                <span class="rounded-full bg-amber-50 px-2.5 py-1 text-xs font-bold text-amber-700">Bloqueado</span>
+                <span class="rounded-full bg-violet-50 px-2.5 py-1 text-xs font-bold text-violet-700">Administrador</span>
+                <span class="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-bold text-blue-700">Informativo</span>
+                <span class="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-bold text-slate-700">Neutro</span>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+              <h3 class="font-extrabold">Alerts</h3>
+              <div class="mt-5 space-y-3">
+                <div class="flex gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-900"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-600"></i><div><p class="font-bold">Sucesso</p><p class="mt-1 text-xs leading-5">Exame cadastrado e disponibilizado.</p></div></div>
+                <div class="flex gap-3 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900"><i data-lucide="triangle-alert" class="mt-0.5 h-5 w-5 shrink-0 text-amber-600"></i><div><p class="font-bold">Atenção</p><p class="mt-1 text-xs leading-5">Revise os dados antes de continuar.</p></div></div>
+                <div class="flex gap-3 rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-900"><i data-lucide="circle-x" class="mt-0.5 h-5 w-5 shrink-0 text-rose-600"></i><div><p class="font-bold">Erro</p><p class="mt-1 text-xs leading-5">Não foi possível concluir a operação.</p></div></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- TABLE / EMPTY / MODAL -->
+        <section>
+          <div class="mb-5"><p class="text-xs font-bold uppercase tracking-[.18em] text-brand-700">08 · Patterns</p><h2 class="mt-2 text-2xl font-extrabold tracking-tight">Tabela, estado vazio e modal</h2></div>
+          <div class="grid gap-6 xl:grid-cols-[1.35fr_.65fr]">
+            <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+              <div class="flex items-center justify-between border-b border-slate-100 p-5"><div><h3 class="font-extrabold">Tabela compacta</h3><p class="mt-1 text-xs text-slate-500">Cabeçalho claro e ações alinhadas à direita.</p></div><button class="text-sm font-bold text-brand-700">Ver todos</button></div>
+              <div class="overflow-x-auto">
+                <table class="w-full min-w-[620px] text-left">
+                  <thead class="bg-slate-50 text-xs uppercase tracking-wide text-slate-400"><tr><th class="px-5 py-3">Paciente</th><th class="px-5 py-3">Protocolo</th><th class="px-5 py-3">Status</th><th class="px-5 py-3 text-right">Ação</th></tr></thead>
+                  <tbody class="divide-y divide-slate-100 text-sm">
+                    <tr><td class="px-5 py-4 font-bold">Mariana Oliveira</td><td class="px-5 py-4 text-slate-500">EXM-001284</td><td class="px-5 py-4"><span class="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">Disponível</span></td><td class="px-5 py-4 text-right"><button class="grid h-9 w-9 place-items-center rounded-lg border border-slate-200 text-slate-500"><i data-lucide="eye" class="h-4 w-4"></i></button></td></tr>
+                    <tr><td class="px-5 py-4 font-bold">Carlos Henrique</td><td class="px-5 py-4 text-slate-500">EXM-001283</td><td class="px-5 py-4"><span class="rounded-full bg-amber-50 px-2.5 py-1 text-xs font-bold text-amber-700">Bloqueado</span></td><td class="px-5 py-4 text-right"><button class="grid h-9 w-9 place-items-center rounded-lg border border-slate-200 text-slate-500"><i data-lucide="eye" class="h-4 w-4"></i></button></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-card">
+              <span class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-slate-50 text-slate-400"><i data-lucide="inbox" class="h-7 w-7"></i></span>
+              <h3 class="mt-5 font-extrabold">Nenhum resultado</h3><p class="mt-2 text-sm leading-6 text-slate-500">Use mensagens claras e uma ação que ajude o usuário a continuar.</p>
+              <button data-modal-open class="mt-5 rounded-xl bg-brand-700 px-4 py-3 text-sm font-bold text-white">Abrir exemplo de modal</button>
+            </article>
+          </div>
+        </section>
+
+        <!-- ICONS -->
+        <section>
+          <div class="mb-5"><p class="text-xs font-bold uppercase tracking-[.18em] text-brand-700">09 · Assets</p><h2 class="mt-2 text-2xl font-extrabold tracking-tight">Iconografia</h2><p class="mt-2 text-sm text-slate-500">Lucide Icons, preferencialmente em 16px, 20px ou 24px.</p></div>
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+            <div class="grid grid-cols-3 gap-4 sm:grid-cols-5 lg:grid-cols-10">
+              <div class="grid place-items-center gap-2 rounded-xl bg-slate-50 p-4"><i data-lucide="heart-pulse" class="h-5 w-5 text-brand-700"></i><span class="text-[10px] font-bold text-slate-400">Logo</span></div>
+              <div class="grid place-items-center gap-2 rounded-xl bg-slate-50 p-4"><i data-lucide="files" class="h-5 w-5 text-slate-600"></i><span class="text-[10px] font-bold text-slate-400">Exames</span></div>
+              <div class="grid place-items-center gap-2 rounded-xl bg-slate-50 p-4"><i data-lucide="file-plus-2" class="h-5 w-5 text-slate-600"></i><span class="text-[10px] font-bold text-slate-400">Novo</span></div>
+              <div class="grid place-items-center gap-2 rounded-xl bg-slate-50 p-4"><i data-lucide="users" class="h-5 w-5 text-slate-600"></i><span class="text-[10px] font-bold text-slate-400">Usuários</span></div>
+              <div class="grid place-items-center gap-2 rounded-xl bg-slate-50 p-4"><i data-lucide="search" class="h-5 w-5 text-slate-600"></i><span class="text-[10px] font-bold text-slate-400">Buscar</span></div>
+              <div class="grid place-items-center gap-2 rounded-xl bg-slate-50 p-4"><i data-lucide="download" class="h-5 w-5 text-slate-600"></i><span class="text-[10px] font-bold text-slate-400">Baixar</span></div>
+              <div class="grid place-items-center gap-2 rounded-xl bg-slate-50 p-4"><i data-lucide="eye" class="h-5 w-5 text-slate-600"></i><span class="text-[10px] font-bold text-slate-400">Visualizar</span></div>
+              <div class="grid place-items-center gap-2 rounded-xl bg-slate-50 p-4"><i data-lucide="pencil" class="h-5 w-5 text-slate-600"></i><span class="text-[10px] font-bold text-slate-400">Editar</span></div>
+              <div class="grid place-items-center gap-2 rounded-xl bg-slate-50 p-4"><i data-lucide="trash-2" class="h-5 w-5 text-rose-600"></i><span class="text-[10px] font-bold text-slate-400">Excluir</span></div>
+              <div class="grid place-items-center gap-2 rounded-xl bg-slate-50 p-4"><i data-lucide="shield-check" class="h-5 w-5 text-brand-700"></i><span class="text-[10px] font-bold text-slate-400">Seguro</span></div>
+            </div>
+          </article>
+        </section>
+
+        <!-- GUIDELINES -->
+        <section class="rounded-[2rem] border border-brand-200 bg-brand-50 p-7 md:p-9">
+          <div class="grid gap-8 lg:grid-cols-2">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[.18em] text-brand-700">Boas práticas</p>
+              <h2 class="mt-3 text-2xl font-extrabold tracking-tight text-brand-950">Regras rápidas de consistência</h2>
+            </div>
+            <div class="grid gap-4 text-sm leading-6 text-brand-900">
+              <p class="flex gap-3"><span class="font-extrabold">01.</span> Use apenas um botão primário por seção ou fluxo principal.</p>
+              <p class="flex gap-3"><span class="font-extrabold">02.</span> Não dependa somente da cor para comunicar status.</p>
+              <p class="flex gap-3"><span class="font-extrabold">03.</span> Campos obrigatórios devem ter validação próxima ao input.</p>
+              <p class="flex gap-3"><span class="font-extrabold">04.</span> Prefira títulos objetivos e textos de apoio curtos.</p>
+              <p class="flex gap-3"><span class="font-extrabold">05.</span> Mantenha o CPF mascarado fora das telas de edição.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <div data-modal class="fixed inset-0 z-[80] hidden bg-slate-950/50 p-5 backdrop-blur-sm">
+    <div class="mx-auto mt-24 max-w-md rounded-2xl bg-white p-6 shadow-soft">
+      <div class="flex items-center justify-between">
+        <div><h3 class="text-lg font-extrabold">Título do modal</h3><p class="mt-1 text-xs text-slate-500">Explique rapidamente o que acontecerá.</p></div>
+        <button data-modal-close class="grid h-9 w-9 place-items-center rounded-lg bg-slate-50 text-slate-500"><i data-lucide="x" class="h-4 w-4"></i></button>
+      </div>
+      <p class="mt-5 text-sm leading-6 text-slate-600">Use modais para confirmações importantes ou tarefas curtas que não precisam de uma página completa.</p>
+      <div class="mt-6 flex justify-end gap-3">
+        <button data-modal-close class="rounded-xl border border-slate-200 px-4 py-3 text-sm font-bold text-slate-600">Cancelar</button>
+        <button data-action data-message="Ação confirmada." class="rounded-xl bg-brand-700 px-4 py-3 text-sm font-bold text-white">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>

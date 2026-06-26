@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do exame — MeuExame</title>
+  <meta name="description" content="Protótipo navegável da plataforma MeuExame.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./assets/tailwind-config.js"></script>
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+<div data-sidebar-backdrop class="fixed inset-0 z-40 hidden bg-slate-950/40 lg:hidden"></div>
+<aside data-sidebar class="fixed inset-y-0 left-0 z-50 flex w-72 -translate-x-full flex-col border-r border-slate-200 bg-white p-5 transition-transform lg:translate-x-0">
+  <div class="px-2">
+<a href="dashboard.html" class="flex items-center gap-3">
+  <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand-700 text-white shadow-lg shadow-brand-700/20">
+    <i data-lucide="heart-pulse" class="h-5 w-5"></i>
+  </span>
+  <span>
+    <span class="block text-base font-extrabold tracking-tight text-slate-900">MeuExame</span>
+    <span class="block text-[10px] font-semibold uppercase tracking-[.18em] text-slate-500">Centro Clínico</span>
+  </span>
+</a></div>
+  <div class="mt-8 rounded-2xl bg-slate-50 p-3">
+    <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Clínica atual</p>
+    <div class="mt-2 flex items-center gap-3">
+      <span class="grid h-9 w-9 place-items-center rounded-lg bg-white text-brand-700 shadow-sm"><i data-lucide="building-2" class="h-4 w-4"></i></span>
+      <div class="min-w-0"><p class="truncate text-sm font-bold text-slate-800">Centro Clínico Master</p><p class="text-xs text-slate-500">Unidade principal</p></div>
+    </div>
+  </div>
+  <nav class="mt-7 flex-1 space-y-1">
+        <a href="dashboard.html" class="sidebar-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+          <i data-lucide="layout-dashboard" class="h-5 w-5 text-slate-400"></i><span>Visão geral</span>
+        </a>
+        <a href="exames.html" class="sidebar-link active flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+          <i data-lucide="files" class="h-5 w-5 text-slate-400"></i><span>Exames</span>
+        </a>
+        <a href="novo-exame.html" class="sidebar-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+          <i data-lucide="file-plus-2" class="h-5 w-5 text-slate-400"></i><span>Novo exame</span>
+        </a>
+        <a href="usuarios.html" class="sidebar-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+          <i data-lucide="users" class="h-5 w-5 text-slate-400"></i><span>Usuários</span>
+        </a>
+
+        <a href="design-system.html" class="sidebar-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+          <i data-lucide="palette" class="h-5 w-5 text-slate-400"></i><span>Design system</span>
+        </a>
+        <a href="logs.html" class="sidebar-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900">
+          <i data-lucide="scroll-text" class="h-5 w-5 text-slate-400"></i><span>Logs do sistema</span>
+        </a></nav>
+  <div class="border-t border-slate-100 pt-4">
+    <div class="flex items-center gap-3 rounded-xl p-2">
+      <span class="grid h-10 w-10 place-items-center rounded-full bg-brand-100 font-bold text-brand-800">AC</span>
+      <div class="min-w-0 flex-1"><p class="truncate text-sm font-bold text-slate-800">Anderson Costa</p><p class="text-xs text-slate-500">Administrador</p></div>
+      <a href="login.html" class="text-slate-400 hover:text-rose-600" title="Sair"><i data-lucide="log-out" class="h-5 w-5"></i></a>
+    </div>
+  </div>
+</aside>
+<div class="min-h-screen lg:pl-72">
+  
+<header class="sticky top-0 z-30 border-b border-slate-200/80 bg-slate-50/90 backdrop-blur-xl">
+  <div class="flex items-center justify-between px-5 py-4 lg:px-8">
+    <div class="flex items-center gap-3">
+      <button data-sidebar-button class="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-700 lg:hidden"><i data-lucide="menu" class="h-5 w-5"></i></button>
+      <div><h1 class="text-lg font-extrabold tracking-tight text-slate-900 md:text-xl">Detalhes do exame</h1><p class="hidden text-sm text-slate-500 sm:block">Visualize informações, acessos e histórico.</p></div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button class="relative grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-500 hover:text-slate-900">
+        <i data-lucide="bell" class="h-5 w-5"></i><span class="absolute right-2 top-2 h-2 w-2 rounded-full bg-rose-500 ring-2 ring-white"></span>
+      </button>
+      <span class="hidden rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600 sm:block">24 jun. 2026</span>
+    </div>
+  </div>
+</header>
+  <main class="p-5 lg:p-8">
+<div class="mx-auto max-w-6xl">
+  <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <div><a href="exames.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-brand-700"><i data-lucide="arrow-left" class="h-4 w-4"></i> Voltar</a><div class="mt-3 flex items-center gap-3"><h2 class="text-2xl font-extrabold tracking-tight">EXM-2026-001284</h2><span class="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">Disponível</span></div><p class="mt-1 text-sm text-slate-500">Cadastrado em 24 de junho de 2026 às 20:42.</p></div>
+    <div class="flex flex-wrap gap-2"><button data-action data-message="Dados liberados para edição (simulação)." class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-600"><i data-lucide="pencil" class="h-4 w-4"></i> Editar</button><button data-modal-open class="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-4 py-3 text-sm font-bold text-white"><i data-lucide="more-horizontal" class="h-4 w-4"></i> Mais ações</button></div>
+  </div>
+  <div class="mt-7 grid gap-6 lg:grid-cols-[1fr_340px]">
+    <div class="space-y-6">
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card"><div class="flex items-center justify-between"><h3 class="font-extrabold">Dados do paciente</h3><i data-lucide="user-round" class="h-5 w-5 text-slate-400"></i></div><dl class="mt-6 grid gap-5 sm:grid-cols-2"><div><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Nome completo</dt><dd class="mt-1 font-bold">Mariana Oliveira</dd></div><div><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">CPF</dt><dd class="mt-1 font-bold">***.245.***-10</dd></div><div><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Tipo de exame</dt><dd class="mt-1 font-bold">Resultado laboratorial</dd></div><div><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Data do exame</dt><dd class="mt-1 font-bold">23/06/2026</dd></div></dl></section>
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card"><div class="flex items-center justify-between"><div><h3 class="font-extrabold">Arquivo enviado</h3><p class="mt-1 text-xs text-slate-500">Documento atualmente disponibilizado.</p></div><button data-action data-message="Seletor para substituição aberto (simulação)." class="text-sm font-bold text-brand-700">Substituir</button></div><div class="mt-5 flex flex-col gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:flex-row sm:items-center"><span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-white text-rose-500 shadow-sm"><i data-lucide="file-text" class="h-6 w-6"></i></span><div class="min-w-0 flex-1"><p class="truncate text-sm font-bold">resultado-mariana-oliveira.pdf</p><p class="mt-1 text-xs text-slate-400">2,4 MB · PDF</p></div><div class="flex gap-2"><button data-action data-message="Visualização do PDF simulada." class="grid h-9 w-9 place-items-center rounded-lg border border-slate-200 bg-white text-slate-500"><i data-lucide="eye" class="h-4 w-4"></i></button><button data-action data-message="Download iniciado (simulação)." class="grid h-9 w-9 place-items-center rounded-lg border border-slate-200 bg-white text-slate-500"><i data-lucide="download" class="h-4 w-4"></i></button></div></div></section>
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card"><h3 class="font-extrabold">Histórico</h3><div class="mt-6 space-y-5 border-l border-slate-200 pl-5"><div class="relative"><span class="absolute -left-[25px] top-1 h-2.5 w-2.5 rounded-full bg-brand-600 ring-4 ring-brand-50"></span><p class="text-sm font-bold">Exame disponibilizado</p><p class="mt-1 text-xs text-slate-500">Anderson Costa · Hoje às 20:43</p></div><div class="relative"><span class="absolute -left-[25px] top-1 h-2.5 w-2.5 rounded-full bg-slate-300 ring-4 ring-slate-50"></span><p class="text-sm font-bold">Arquivo enviado</p><p class="mt-1 text-xs text-slate-500">Anderson Costa · Hoje às 20:42</p></div><div class="relative"><span class="absolute -left-[25px] top-1 h-2.5 w-2.5 rounded-full bg-slate-300 ring-4 ring-slate-50"></span><p class="text-sm font-bold">Cadastro criado</p><p class="mt-1 text-xs text-slate-500">Anderson Costa · Hoje às 20:41</p></div></div></section>
+    </div>
+    <aside class="space-y-6">
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card"><h3 class="font-extrabold">Acessos do paciente</h3><div class="mt-5 grid grid-cols-2 gap-3"><div class="rounded-xl bg-slate-50 p-4"><p class="text-2xl font-extrabold">3</p><p class="mt-1 text-xs text-slate-500">Visualizações</p></div><div class="rounded-xl bg-slate-50 p-4"><p class="text-2xl font-extrabold">1</p><p class="mt-1 text-xs text-slate-500">Download</p></div></div><p class="mt-4 flex items-center gap-2 text-xs text-slate-400"><i data-lucide="clock-3" class="h-4 w-4"></i> Último acesso hoje às 21:04</p></section>
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card"><h3 class="font-extrabold">Responsável</h3><div class="mt-5 flex items-center gap-3"><span class="grid h-11 w-11 place-items-center rounded-full bg-brand-100 font-bold text-brand-800">AC</span><div><p class="text-sm font-bold">Anderson Costa</p><p class="text-xs text-slate-500">Administrador</p></div></div></section>
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-card"><h3 class="font-extrabold">Observação interna</h3><p class="mt-4 text-sm leading-6 text-slate-500">Resultado revisado e liberado após conferência dos dados cadastrais.</p></section>
+    </aside>
+  </div>
+</div>
+<div data-modal class="fixed inset-0 z-[80] hidden bg-slate-950/50 p-5 backdrop-blur-sm"><div class="mx-auto mt-24 max-w-md rounded-2xl bg-white p-6 shadow-soft"><div class="flex items-center justify-between"><h3 class="text-lg font-extrabold">Ações do exame</h3><button data-modal-close class="grid h-9 w-9 place-items-center rounded-lg bg-slate-50 text-slate-500"><i data-lucide="x" class="h-4 w-4"></i></button></div><div class="mt-5 grid gap-2"><button data-action data-message="Exame bloqueado (simulação)." class="flex items-center gap-3 rounded-xl px-4 py-3 text-left text-sm font-bold text-amber-700 hover:bg-amber-50"><i data-lucide="ban" class="h-4 w-4"></i> Bloquear acesso</button><button data-action data-message="Link copiado (simulação)." class="flex items-center gap-3 rounded-xl px-4 py-3 text-left text-sm font-bold text-slate-700 hover:bg-slate-50"><i data-lucide="link" class="h-4 w-4"></i> Copiar referência</button><button data-action data-message="Exclusão simulada." class="flex items-center gap-3 rounded-xl px-4 py-3 text-left text-sm font-bold text-rose-700 hover:bg-rose-50"><i data-lucide="trash-2" class="h-4 w-4"></i> Excluir exame</button></div></div></div>
+</main>
+</div>
+<script src="./assets/app.js"></script>
+</body></html>

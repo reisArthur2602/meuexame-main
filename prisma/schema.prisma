@@ -1,0 +1,85 @@
+generator client {
+    provider = "prisma-client"
+    output   = "../src/generated/prisma"
+}
+
+datasource db {
+    provider = "postgresql"
+}
+
+enum UserRole {
+    ADMIN
+    STAFF
+}
+
+enum ExamStatus {
+    AVAILABLE
+    BLOCKED
+    ARCHIVED
+}
+
+model User {
+    id           String    @id @default(uuid())
+    name         String
+    username     String    @unique
+    passwordHash String    @map("password_hash")
+    role         UserRole  @default(STAFF)
+    isActive     Boolean   @default(true) @map("is_active")
+    lastLoginAt  DateTime? @map("last_login_at")
+    createdAt    DateTime  @default(now()) @map("created_at")
+    updatedAt    DateTime  @updatedAt @map("updated_at")
+
+    createdExams Exam[] @relation("ExamCreatedBy")
+    updatedExams Exam[] @relation("ExamUpdatedBy")
+
+    @@index([role])
+    @@index([isActive])
+    @@map("users")
+}
+
+model Exam {
+    id            String     @id @default(uuid())
+    patientName   String     @map("patient_name")
+    patientCpf    String     @map("patient_cpf")
+    patientPhone  String?    @map("patient_phone")
+    protocol      String
+    status        ExamStatus @default(AVAILABLE)
+    whatsappSent     Boolean   @default(false) @map("whatsapp_sent")
+    whatsappSentAt   DateTime? @map("whatsapp_sent_at")
+    whatsappError    String?   @map("whatsapp_error")
+    whatsappAttempts Int       @default(0) @map("whatsapp_attempts")
+    internalNotes String?    @map("internal_notes")
+    availableAt   DateTime?  @map("available_at")
+    blockedAt     DateTime?  @map("blocked_at")
+    createdById   String     @map("created_by_id")
+    updatedById   String?    @map("updated_by_id")
+    createdAt     DateTime   @default(now()) @map("created_at")
+    updatedAt     DateTime   @updatedAt @map("updated_at")
+
+    createdBy User  @relation("ExamCreatedBy", fields: [createdById], references: [id], onDelete: Restrict)
+    updatedBy User? @relation("ExamUpdatedBy", fields: [updatedById], references: [id], onDelete: SetNull)
+    documents ExamDocument[]
+
+    @@unique([patientCpf, protocol])
+    @@index([patientName])
+    @@index([patientCpf])
+    @@index([protocol])
+    @@index([status])
+    @@index([createdAt])
+    @@map("exams")
+}
+
+model ExamDocument {
+    id        String   @id @default(uuid())
+    examId    String   @map("exam_id")
+    name      String
+    path      String
+    size      Int      @default(0)
+    createdAt DateTime @default(now()) @map("created_at")
+    updatedAt DateTime @updatedAt @map("updated_at")
+
+    exam Exam @relation(fields: [examId], references: [id], onDelete: Cascade)
+
+    @@index([examId])
+    @@map("exam_documents")
+}
