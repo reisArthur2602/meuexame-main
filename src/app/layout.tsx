@@ -1,31 +1,44 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Toaster } from "sonner";
-import { TanstackQueryProvider } from "@/integrations/tanstack-query";
-import "./globals.css";
+import { TanstackQueryProvider } from '@/integrations/tanstack-query';
+import type { Metadata } from 'next';
+import { DM_Sans } from 'next/font/google';
+import { Toaster } from 'sonner';
+import './globals.css';
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
+const dmSans = DM_Sans({
+    variable: '--font-dm-sans',
+    subsets: ['latin'],
+    display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "MeuExame",
-  description: "Sistema de gestão de exames clínicos",
+    title: {
+        default: 'MeuLaudo',
+        template: '%s | MeuLaudo',
+    },
+    description: 'Plataforma de gestão e entrega de laudos clínicos.',
+    applicationName: 'MeuLaudo',
+    authors: [{ name: 'MeuLaudo' }],
+    robots: { index: false, follow: false },
+    openGraph: {
+        type: 'website',
+        locale: 'pt_BR',
+        title: 'MeuLaudo',
+        description: 'Plataforma de gestão e entrega de laudos clínicos.',
+        siteName: 'MeuLaudo',
+    },
+    appleWebApp: {
+        title: 'MeuLaudo',
+        statusBarStyle: 'default',
+    },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="pt-BR" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full">
-          <TanstackQueryProvider>{children}</TanstackQueryProvider>
-          <Toaster richColors position="top-right" />
+const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => (
+    <html lang="pt-BR" className={`${dmSans.variable} h-full antialiased`}>
+        <body className="min-h-full">
+            <TanstackQueryProvider>{children}</TanstackQueryProvider>
+            <Toaster richColors position="top-right" />
         </body>
     </html>
-  );
-}
+);
+
+export default RootLayout;

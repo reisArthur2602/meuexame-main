@@ -45,7 +45,6 @@ export type ExamMinAggregateOutputType = {
   whatsappSentAt: Date | null
   whatsappError: string | null
   whatsappAttempts: number | null
-  internalNotes: string | null
   availableAt: Date | null
   blockedAt: Date | null
   createdById: string | null
@@ -65,7 +64,6 @@ export type ExamMaxAggregateOutputType = {
   whatsappSentAt: Date | null
   whatsappError: string | null
   whatsappAttempts: number | null
-  internalNotes: string | null
   availableAt: Date | null
   blockedAt: Date | null
   createdById: string | null
@@ -85,7 +83,6 @@ export type ExamCountAggregateOutputType = {
   whatsappSentAt: number
   whatsappError: number
   whatsappAttempts: number
-  internalNotes: number
   availableAt: number
   blockedAt: number
   createdById: number
@@ -115,7 +112,6 @@ export type ExamMinAggregateInputType = {
   whatsappSentAt?: true
   whatsappError?: true
   whatsappAttempts?: true
-  internalNotes?: true
   availableAt?: true
   blockedAt?: true
   createdById?: true
@@ -135,7 +131,6 @@ export type ExamMaxAggregateInputType = {
   whatsappSentAt?: true
   whatsappError?: true
   whatsappAttempts?: true
-  internalNotes?: true
   availableAt?: true
   blockedAt?: true
   createdById?: true
@@ -155,7 +150,6 @@ export type ExamCountAggregateInputType = {
   whatsappSentAt?: true
   whatsappError?: true
   whatsappAttempts?: true
-  internalNotes?: true
   availableAt?: true
   blockedAt?: true
   createdById?: true
@@ -262,7 +256,6 @@ export type ExamGroupByOutputType = {
   whatsappSentAt: Date | null
   whatsappError: string | null
   whatsappAttempts: number
-  internalNotes: string | null
   availableAt: Date | null
   blockedAt: Date | null
   createdById: string
@@ -305,7 +298,6 @@ export type ExamWhereInput = {
   whatsappSentAt?: Prisma.DateTimeNullableFilter<"Exam"> | Date | string | null
   whatsappError?: Prisma.StringNullableFilter<"Exam"> | string | null
   whatsappAttempts?: Prisma.IntFilter<"Exam"> | number
-  internalNotes?: Prisma.StringNullableFilter<"Exam"> | string | null
   availableAt?: Prisma.DateTimeNullableFilter<"Exam"> | Date | string | null
   blockedAt?: Prisma.DateTimeNullableFilter<"Exam"> | Date | string | null
   createdById?: Prisma.StringFilter<"Exam"> | string
@@ -328,7 +320,6 @@ export type ExamOrderByWithRelationInput = {
   whatsappSentAt?: Prisma.SortOrderInput | Prisma.SortOrder
   whatsappError?: Prisma.SortOrderInput | Prisma.SortOrder
   whatsappAttempts?: Prisma.SortOrder
-  internalNotes?: Prisma.SortOrderInput | Prisma.SortOrder
   availableAt?: Prisma.SortOrderInput | Prisma.SortOrder
   blockedAt?: Prisma.SortOrderInput | Prisma.SortOrder
   createdById?: Prisma.SortOrder
@@ -355,7 +346,6 @@ export type ExamWhereUniqueInput = Prisma.AtLeast<{
   whatsappSentAt?: Prisma.DateTimeNullableFilter<"Exam"> | Date | string | null
   whatsappError?: Prisma.StringNullableFilter<"Exam"> | string | null
   whatsappAttempts?: Prisma.IntFilter<"Exam"> | number
-  internalNotes?: Prisma.StringNullableFilter<"Exam"> | string | null
   availableAt?: Prisma.DateTimeNullableFilter<"Exam"> | Date | string | null
   blockedAt?: Prisma.DateTimeNullableFilter<"Exam"> | Date | string | null
   createdById?: Prisma.StringFilter<"Exam"> | string
@@ -378,7 +368,6 @@ export type ExamOrderByWithAggregationInput = {
   whatsappSentAt?: Prisma.SortOrderInput | Prisma.SortOrder
   whatsappError?: Prisma.SortOrderInput | Prisma.SortOrder
   whatsappAttempts?: Prisma.SortOrder
-  internalNotes?: Prisma.SortOrderInput | Prisma.SortOrder
   availableAt?: Prisma.SortOrderInput | Prisma.SortOrder
   blockedAt?: Prisma.SortOrderInput | Prisma.SortOrder
   createdById?: Prisma.SortOrder
@@ -406,7 +395,6 @@ export type ExamScalarWhereWithAggregatesInput = {
   whatsappSentAt?: Prisma.DateTimeNullableWithAggregatesFilter<"Exam"> | Date | string | null
   whatsappError?: Prisma.StringNullableWithAggregatesFilter<"Exam"> | string | null
   whatsappAttempts?: Prisma.IntWithAggregatesFilter<"Exam"> | number
-  internalNotes?: Prisma.StringNullableWithAggregatesFilter<"Exam"> | string | null
   availableAt?: Prisma.DateTimeNullableWithAggregatesFilter<"Exam"> | Date | string | null
   blockedAt?: Prisma.DateTimeNullableWithAggregatesFilter<"Exam"> | Date | string | null
   createdById?: Prisma.StringWithAggregatesFilter<"Exam"> | string
@@ -426,7 +414,6 @@ export type ExamCreateInput = {
   whatsappSentAt?: Date | string | null
   whatsappError?: string | null
   whatsappAttempts?: number
-  internalNotes?: string | null
   availableAt?: Date | string | null
   blockedAt?: Date | string | null
   createdAt?: Date | string
@@ -447,7 +434,6 @@ export type ExamUncheckedCreateInput = {
   whatsappSentAt?: Date | string | null
   whatsappError?: string | null
   whatsappAttempts?: number
-  internalNotes?: string | null
   availableAt?: Date | string | null
   blockedAt?: Date | string | null
   createdById: string
@@ -468,7 +454,6 @@ export type ExamUpdateInput = {
   whatsappSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   whatsappError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   whatsappAttempts?: Prisma.IntFieldUpdateOperationsInput | number
-  internalNotes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   availableAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   blockedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -489,7 +474,6 @@ export type ExamUncheckedUpdateInput = {
   whatsappSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   whatsappError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   whatsappAttempts?: Prisma.IntFieldUpdateOperationsInput | number
-  internalNotes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   availableAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   blockedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdById?: Prisma.StringFieldUpdateOperationsInput | string
@@ -510,7 +494,6 @@ export type ExamCreateManyInput = {
   whatsappSentAt?: Date | string | null
   whatsappError?: string | null
   whatsappAttempts?: number
-  internalNotes?: string | null
   availableAt?: Date | string | null
   blockedAt?: Date | string | null
   createdById: string
@@ -530,7 +513,6 @@ export type ExamUpdateManyMutationInput = {
   whatsappSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   whatsappError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   whatsappAttempts?: Prisma.IntFieldUpdateOperationsInput | number
-  internalNotes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   availableAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   blockedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -548,7 +530,6 @@ export type ExamUncheckedUpdateManyInput = {
   whatsappSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   whatsappError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   whatsappAttempts?: Prisma.IntFieldUpdateOperationsInput | number
-  internalNotes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   availableAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   blockedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdById?: Prisma.StringFieldUpdateOperationsInput | string
@@ -583,7 +564,6 @@ export type ExamCountOrderByAggregateInput = {
   whatsappSentAt?: Prisma.SortOrder
   whatsappError?: Prisma.SortOrder
   whatsappAttempts?: Prisma.SortOrder
-  internalNotes?: Prisma.SortOrder
   availableAt?: Prisma.SortOrder
   blockedAt?: Prisma.SortOrder
   createdById?: Prisma.SortOrder
@@ -607,7 +587,6 @@ export type ExamMaxOrderByAggregateInput = {
   whatsappSentAt?: Prisma.SortOrder
   whatsappError?: Prisma.SortOrder
   whatsappAttempts?: Prisma.SortOrder
-  internalNotes?: Prisma.SortOrder
   availableAt?: Prisma.SortOrder
   blockedAt?: Prisma.SortOrder
   createdById?: Prisma.SortOrder
@@ -627,7 +606,6 @@ export type ExamMinOrderByAggregateInput = {
   whatsappSentAt?: Prisma.SortOrder
   whatsappError?: Prisma.SortOrder
   whatsappAttempts?: Prisma.SortOrder
-  internalNotes?: Prisma.SortOrder
   availableAt?: Prisma.SortOrder
   blockedAt?: Prisma.SortOrder
   createdById?: Prisma.SortOrder
@@ -770,7 +748,6 @@ export type ExamCreateWithoutCreatedByInput = {
   whatsappSentAt?: Date | string | null
   whatsappError?: string | null
   whatsappAttempts?: number
-  internalNotes?: string | null
   availableAt?: Date | string | null
   blockedAt?: Date | string | null
   createdAt?: Date | string
@@ -790,7 +767,6 @@ export type ExamUncheckedCreateWithoutCreatedByInput = {
   whatsappSentAt?: Date | string | null
   whatsappError?: string | null
   whatsappAttempts?: number
-  internalNotes?: string | null
   availableAt?: Date | string | null
   blockedAt?: Date | string | null
   updatedById?: string | null
@@ -820,7 +796,6 @@ export type ExamCreateWithoutUpdatedByInput = {
   whatsappSentAt?: Date | string | null
   whatsappError?: string | null
   whatsappAttempts?: number
-  internalNotes?: string | null
   availableAt?: Date | string | null
   blockedAt?: Date | string | null
   createdAt?: Date | string
@@ -840,7 +815,6 @@ export type ExamUncheckedCreateWithoutUpdatedByInput = {
   whatsappSentAt?: Date | string | null
   whatsappError?: string | null
   whatsappAttempts?: number
-  internalNotes?: string | null
   availableAt?: Date | string | null
   blockedAt?: Date | string | null
   createdById: string
@@ -889,7 +863,6 @@ export type ExamScalarWhereInput = {
   whatsappSentAt?: Prisma.DateTimeNullableFilter<"Exam"> | Date | string | null
   whatsappError?: Prisma.StringNullableFilter<"Exam"> | string | null
   whatsappAttempts?: Prisma.IntFilter<"Exam"> | number
-  internalNotes?: Prisma.StringNullableFilter<"Exam"> | string | null
   availableAt?: Prisma.DateTimeNullableFilter<"Exam"> | Date | string | null
   blockedAt?: Prisma.DateTimeNullableFilter<"Exam"> | Date | string | null
   createdById?: Prisma.StringFilter<"Exam"> | string
@@ -925,7 +898,6 @@ export type ExamCreateWithoutDocumentsInput = {
   whatsappSentAt?: Date | string | null
   whatsappError?: string | null
   whatsappAttempts?: number
-  internalNotes?: string | null
   availableAt?: Date | string | null
   blockedAt?: Date | string | null
   createdAt?: Date | string
@@ -945,7 +917,6 @@ export type ExamUncheckedCreateWithoutDocumentsInput = {
   whatsappSentAt?: Date | string | null
   whatsappError?: string | null
   whatsappAttempts?: number
-  internalNotes?: string | null
   availableAt?: Date | string | null
   blockedAt?: Date | string | null
   createdById: string
@@ -981,7 +952,6 @@ export type ExamUpdateWithoutDocumentsInput = {
   whatsappSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   whatsappError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   whatsappAttempts?: Prisma.IntFieldUpdateOperationsInput | number
-  internalNotes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   availableAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   blockedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1001,7 +971,6 @@ export type ExamUncheckedUpdateWithoutDocumentsInput = {
   whatsappSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   whatsappError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   whatsappAttempts?: Prisma.IntFieldUpdateOperationsInput | number
-  internalNotes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   availableAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   blockedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdById?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1021,7 +990,6 @@ export type ExamCreateManyCreatedByInput = {
   whatsappSentAt?: Date | string | null
   whatsappError?: string | null
   whatsappAttempts?: number
-  internalNotes?: string | null
   availableAt?: Date | string | null
   blockedAt?: Date | string | null
   updatedById?: string | null
@@ -1040,7 +1008,6 @@ export type ExamCreateManyUpdatedByInput = {
   whatsappSentAt?: Date | string | null
   whatsappError?: string | null
   whatsappAttempts?: number
-  internalNotes?: string | null
   availableAt?: Date | string | null
   blockedAt?: Date | string | null
   createdById: string
@@ -1059,7 +1026,6 @@ export type ExamUpdateWithoutCreatedByInput = {
   whatsappSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   whatsappError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   whatsappAttempts?: Prisma.IntFieldUpdateOperationsInput | number
-  internalNotes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   availableAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   blockedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1079,7 +1045,6 @@ export type ExamUncheckedUpdateWithoutCreatedByInput = {
   whatsappSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   whatsappError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   whatsappAttempts?: Prisma.IntFieldUpdateOperationsInput | number
-  internalNotes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   availableAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   blockedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   updatedById?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1099,7 +1064,6 @@ export type ExamUncheckedUpdateManyWithoutCreatedByInput = {
   whatsappSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   whatsappError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   whatsappAttempts?: Prisma.IntFieldUpdateOperationsInput | number
-  internalNotes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   availableAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   blockedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   updatedById?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1118,7 +1082,6 @@ export type ExamUpdateWithoutUpdatedByInput = {
   whatsappSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   whatsappError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   whatsappAttempts?: Prisma.IntFieldUpdateOperationsInput | number
-  internalNotes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   availableAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   blockedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1138,7 +1101,6 @@ export type ExamUncheckedUpdateWithoutUpdatedByInput = {
   whatsappSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   whatsappError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   whatsappAttempts?: Prisma.IntFieldUpdateOperationsInput | number
-  internalNotes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   availableAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   blockedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdById?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1158,7 +1120,6 @@ export type ExamUncheckedUpdateManyWithoutUpdatedByInput = {
   whatsappSentAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   whatsappError?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   whatsappAttempts?: Prisma.IntFieldUpdateOperationsInput | number
-  internalNotes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   availableAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   blockedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdById?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1208,7 +1169,6 @@ export type ExamSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = r
   whatsappSentAt?: boolean
   whatsappError?: boolean
   whatsappAttempts?: boolean
-  internalNotes?: boolean
   availableAt?: boolean
   blockedAt?: boolean
   createdById?: boolean
@@ -1232,7 +1192,6 @@ export type ExamSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensio
   whatsappSentAt?: boolean
   whatsappError?: boolean
   whatsappAttempts?: boolean
-  internalNotes?: boolean
   availableAt?: boolean
   blockedAt?: boolean
   createdById?: boolean
@@ -1254,7 +1213,6 @@ export type ExamSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensio
   whatsappSentAt?: boolean
   whatsappError?: boolean
   whatsappAttempts?: boolean
-  internalNotes?: boolean
   availableAt?: boolean
   blockedAt?: boolean
   createdById?: boolean
@@ -1276,7 +1234,6 @@ export type ExamSelectScalar = {
   whatsappSentAt?: boolean
   whatsappError?: boolean
   whatsappAttempts?: boolean
-  internalNotes?: boolean
   availableAt?: boolean
   blockedAt?: boolean
   createdById?: boolean
@@ -1285,7 +1242,7 @@ export type ExamSelectScalar = {
   updatedAt?: boolean
 }
 
-export type ExamOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "patientName" | "patientCpf" | "patientPhone" | "protocol" | "status" | "whatsappSent" | "whatsappSentAt" | "whatsappError" | "whatsappAttempts" | "internalNotes" | "availableAt" | "blockedAt" | "createdById" | "updatedById" | "createdAt" | "updatedAt", ExtArgs["result"]["exam"]>
+export type ExamOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "patientName" | "patientCpf" | "patientPhone" | "protocol" | "status" | "whatsappSent" | "whatsappSentAt" | "whatsappError" | "whatsappAttempts" | "availableAt" | "blockedAt" | "createdById" | "updatedById" | "createdAt" | "updatedAt", ExtArgs["result"]["exam"]>
 export type ExamInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   createdBy?: boolean | Prisma.UserDefaultArgs<ExtArgs>
   updatedBy?: boolean | Prisma.Exam$updatedByArgs<ExtArgs>
@@ -1319,7 +1276,6 @@ export type $ExamPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs =
     whatsappSentAt: Date | null
     whatsappError: string | null
     whatsappAttempts: number
-    internalNotes: string | null
     availableAt: Date | null
     blockedAt: Date | null
     createdById: string
@@ -1762,7 +1718,6 @@ export interface ExamFieldRefs {
   readonly whatsappSentAt: Prisma.FieldRef<"Exam", 'DateTime'>
   readonly whatsappError: Prisma.FieldRef<"Exam", 'String'>
   readonly whatsappAttempts: Prisma.FieldRef<"Exam", 'Int'>
-  readonly internalNotes: Prisma.FieldRef<"Exam", 'String'>
   readonly availableAt: Prisma.FieldRef<"Exam", 'DateTime'>
   readonly blockedAt: Prisma.FieldRef<"Exam", 'DateTime'>
   readonly createdById: Prisma.FieldRef<"Exam", 'String'>

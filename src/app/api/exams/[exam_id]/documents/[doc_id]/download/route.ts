@@ -1,14 +1,15 @@
-import { NextRequest, NextResponse } from "next/server";
-import { getSession } from "@/helpers/get-session";
-import prisma from "@/lib/prisma";
+import { verifyAuth } from "@/helpers/verify-auth";
 import { downloadToBuffer } from "@/lib/ftp";
+import prisma from "@/lib/prisma";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
   _req: NextRequest,
   { params }: { params: Promise<{ exam_id: string; doc_id: string }> }
 ) {
-  const session = await getSession();
-  if (!session) {
+  try {
+    await verifyAuth();
+  } catch {
     return NextResponse.json({ error: "Não autorizado." }, { status: 401 });
   }
 

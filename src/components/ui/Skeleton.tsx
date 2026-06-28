@@ -9,7 +9,7 @@ export function Skeleton({ circle = false, className, ...props }: SkeletonProps)
   return (
     <div
       className={cn(
-        "animate-pulse bg-border",
+        "animate-pulse bg-border/30",
         circle ? "rounded-full" : "rounded-lg",
         className
       )}

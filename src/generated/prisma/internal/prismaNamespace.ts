@@ -675,6 +675,7 @@ export const UserScalarFieldEnum = {
   role: 'role',
   isActive: 'isActive',
   lastLoginAt: 'lastLoginAt',
+  onboardingCompletedAt: 'onboardingCompletedAt',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 } as const
@@ -693,7 +694,6 @@ export const ExamScalarFieldEnum = {
   whatsappSentAt: 'whatsappSentAt',
   whatsappError: 'whatsappError',
   whatsappAttempts: 'whatsappAttempts',
-  internalNotes: 'internalNotes',
   availableAt: 'availableAt',
   blockedAt: 'blockedAt',
   createdById: 'createdById',
