@@ -26,7 +26,7 @@ const FAQS = [
 
 export const FaqSection = () => {
     return (
-        <section id="faq" className="mx-auto max-w-3xl scroll-mt-24 px-5 py-20 lg:px-8">
+        <section id="faq" className="mx-auto max-w-3xl scroll-mt-24 px-5 py-16 sm:py-20 lg:px-8">
             <Reveal className="text-center">
                 <p className="text-sm font-bold uppercase tracking-[.18em] text-brand-700">
                     Dúvidas frequentes

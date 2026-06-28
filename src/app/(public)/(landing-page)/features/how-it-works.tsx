@@ -27,7 +27,7 @@ export const HowItWorks = () => {
     return (
         <section
             id="como-funciona"
-            className="mx-auto max-w-7xl scroll-mt-24 px-5 py-20 lg:px-8"
+            className="mx-auto max-w-7xl scroll-mt-24 px-5 py-16 sm:py-20 lg:px-8"
         >
             <Reveal className="mx-auto max-w-2xl text-center">
                 <p className="text-sm font-bold uppercase tracking-[.18em] text-brand-700">

@@ -12,7 +12,7 @@ export const SecuritySection = () => {
                 />
             </div>
 
-            <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:px-8">
+            <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-14 sm:py-16 lg:grid-cols-2 lg:px-8">
                 <Reveal>
                     <span className="inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-brand-300 ring-1 ring-white/10">
                         PRIVACIDADE EM PRIMEIRO LUGAR

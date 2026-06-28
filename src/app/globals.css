@@ -125,7 +125,7 @@ input[type='file']::file-selector-button {
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--color-brand-400) transparent;
+    scrollbar-color: var(--color-brand-700) transparent;
 }
 
 ::-webkit-scrollbar {
@@ -138,10 +138,10 @@ input[type='file']::file-selector-button {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color-brand-400);
+    background: var(--color-brand-700);
     border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-brand-500);
+    background: var(--color-brand-700);
 }

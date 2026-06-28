@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 export const CtaSection = () => {
     return (
-        <section className="px-5 pb-20 lg:px-8">
+        <section className="px-5 pb-16 sm:pb-20 lg:px-8">
             <Reveal>
-                <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-linear-to-br from-brand-700 to-brand-900 px-6 py-14 text-center shadow-brand md:py-16">
+                <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-linear-to-br from-brand-700 to-brand-900 px-6 py-12 text-center shadow-brand sm:rounded-[2.5rem] sm:py-14 md:py-16">
                     <div aria-hidden className="pointer-events-none absolute inset-0">
                         <div className="animate-blob absolute -left-10 -top-10 h-64 w-64 rounded-full bg-brand-300/30 blur-3xl" />
                         <div
